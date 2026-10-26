@@ -1,0 +1,10 @@
+{
+  "title": "O mnie",
+  "photo": "",
+  "text": "Cześć, jestem Karolina! Tworzę Catering Przy okazji! – pyszne jedzenie na Twoją okazję.\n\nPrzygotowuję finger foody, party boxy, ciasta i bufety na imprezy rodzinne, firmowe i plany zdjęciowe. Stawiam na świeże składniki i piękne podanie.\n\nDziałam w Bliznem Jasińskiego, dowożę na terenie Warszawy i okolic. Napisz lub zadzwoń – razem dobierzemy menu do Twojej okazji.",
+  "highlights": [
+    { "number": "Finger food", "label": "przekąski na każdą imprezę" },
+    { "number": "Party boxy", "label": "gotowe do podania" },
+    { "number": "Ciasta", "label": "domowe wypieki" }
+  ]
+}

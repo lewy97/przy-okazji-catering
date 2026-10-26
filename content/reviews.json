@@ -1,0 +1,10 @@
+{
+  "rating": 5,
+  "count": 0,
+  "googleUrl": "",
+  "reviewUrl": "",
+  "reviews": [
+    { "author": "Przykładowa opinia", "rating": 5, "date": "", "text": "Tu wklej prawdziwą opinię z Google – edytujesz ją w panelu /admin w sekcji „Opinie Google”." },
+    { "author": "Przykładowa opinia", "rating": 5, "date": "", "text": "Każdą opinię dodajesz osobno: autor, liczba gwiazdek, data i treść." }
+  ]
+}

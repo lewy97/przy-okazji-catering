@@ -1,0 +1,8 @@
+# Strona statyczna – bez budowania, publikujemy cały folder
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

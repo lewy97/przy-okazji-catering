@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catering Przy okazji!</title>
+  <meta name="description" content="Catering Przy okazji! – finger foody, party boxy, ciasta i catering na imprezy. Warszawa i okolice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#start" class="brand">
+        <span class="logo-mark logo-small"></span>
+        <span class="brand-name" data-bind="name">Przy okazji!</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="/oferta/">Oferta</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#o-mnie">O mnie</a>
+        <a href="#opinie">Opinie</a>
+        <a href="#kontakt" class="btn btn-small">Zamów</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="start" class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <p class="script hero-script" data-bind="tagline"></p>
+          <h1 data-bind="heroTitle">Catering na każdą okazję</h1>
+          <div class="divider"></div>
+          <p class="lead" data-bind="heroText"></p>
+          <div class="hero-cta">
+            <a href="/oferta/" class="btn">Zobacz ofertę</a>
+            <a href="#kontakt" class="btn btn-ghost">Zadzwoń</a>
+          </div>
+          <a href="#opinie" class="hero-rating" id="hero-rating" hidden></a>
+        </div>
+        <div class="hero-visual" id="hero-visual"></div>
+      </div>
+    </section>
+
+    <div class="contact-strip">
+      <div class="wrap contact-strip-inner" id="contact-strip"></div>
+    </div>
+
+    <section id="oferta" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Oferta</h2>
+          <div class="divider"></div>
+          <p class="section-sub">Wybierz, co Cię interesuje – pełne menu z daniami i składnikami znajdziesz na stronie oferty.</p>
+        </div>
+        <div class="offer-tiles" id="offer-tiles"></div>
+        <p class="center offer-more"><a href="/oferta/" class="btn">Zobacz pełną ofertę</a></p>
+      </div>
+    </section>
+
+    <section id="galeria" class="section section-alt" hidden>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Galeria</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="gallery" id="gallery"></div>
+        <p class="center" id="gallery-ig"></p>
+      </div>
+    </section>
+
+    <section id="o-mnie" class="section">
+      <div class="wrap about">
+        <div class="about-photo" id="about-photo"></div>
+        <div>
+          <p class="script about-script">Poznajmy się</p>
+          <h2 id="about-title">O mnie</h2>
+          <div class="divider divider-left"></div>
+          <div id="about-text" class="about-text"></div>
+          <div class="highlights" id="highlights"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="opinie" class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Opinie klientów</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="rating-summary" id="rating-summary"></div>
+        <div class="reviews" id="reviews"></div>
+        <div class="reviews-links" id="reviews-links"></div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section contact-section">
+      <div class="wrap contact">
+        <span class="logo-mark logo-contact"></span>
+        <h2>Zamów catering</h2>
+        <div class="divider"></div>
+        <p class="contact-lead" data-bind="contactText">Napisz lub zadzwoń – podaj datę, liczbę gości i rodzaj okazji, a przygotuję dla Ciebie propozycję.</p>
+        <ul class="contact-list" id="contact-list"></ul>
+        <p class="script contact-script" data-bind="slogan"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year"></span> <span data-bind="name"></span> · <span data-bind="owner"></span></div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

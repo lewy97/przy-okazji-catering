@@ -1,0 +1,114 @@
+# Panel edycji strony (Decap CMS) – dostępny pod adresem twojadomena.pl/admin
+backend:
+  name: github
+  repo: lewy97/przy-okazji-catering
+  branch: main
+
+# Do testów na własnym komputerze (npx decap-server) odkomentuj:
+# local_backend: true
+
+locale: pl
+site_url: https://cateringprzyokazji.pl
+display_url: https://cateringprzyokazji.pl
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: strona
+    label: Treść strony
+    editor: { preview: false }
+    files:
+      - name: menu
+        label: "🍽️ Propozycje menu"
+        file: content/menu.json
+        fields:
+          - name: menus
+            label: Menu
+            label_singular: menu
+            widget: list
+            summary: "{{fields.title}} – {{fields.occasion}}"
+            fields:
+              - { name: title, label: "Nazwa menu", widget: string }
+              - name: occasion
+                label: Okazja
+                widget: select
+                options: ["Imprezy", "Urodziny / Wieczory kawalerskie", "Plan zdjęciowy / Firmy", "Grill / Garden Party", "Ciasta", "Komunia / Chrzciny", "Wesele", "Święta", "Inne"]
+              - { name: price, label: "Cena (np. od 129 zł / os.)", widget: string, required: false }
+              - { name: description, label: "Krótki opis", widget: text, required: false }
+              - { name: image, label: "Zdjęcie", widget: image, required: false }
+              - name: dishes
+                label: Dania
+                label_singular: danie
+                widget: list
+                summary: "{{fields.name}}"
+                fields:
+                  - { name: name, label: "Nazwa dania", widget: string }
+                  - { name: ingredients, label: "Składniki (po przecinku)", widget: text, required: false }
+
+      - name: gallery
+        label: "📷 Galeria zdjęć"
+        file: content/gallery.json
+        fields:
+          - name: photos
+            label: Zdjęcia
+            label_singular: zdjęcie
+            widget: list
+            summary: "{{fields.alt}}"
+            fields:
+              - { name: image, label: Zdjęcie, widget: image }
+              - { name: alt, label: "Krótki opis (np. Party box urodzinowy)", widget: string, required: false }
+
+      - name: about
+        label: "👩‍🍳 O mnie"
+        file: content/about.json
+        fields:
+          - { name: title, label: Tytuł, widget: string }
+          - { name: photo, label: Zdjęcie, widget: image, required: false }
+          - { name: text, label: "Tekst (pusta linia = nowy akapit)", widget: text }
+          - name: highlights
+            label: "Liczby / wyróżniki"
+            widget: list
+            summary: "{{fields.number}} {{fields.label}}"
+            fields:
+              - { name: number, label: "Liczba (np. 10+)", widget: string }
+              - { name: label, label: "Opis", widget: string }
+
+      - name: reviews
+        label: "⭐ Opinie Google"
+        file: content/reviews.json
+        fields:
+          - { name: rating, label: "Średnia ocena z Google (np. 4.9)", widget: number, value_type: float, min: 0, max: 5, step: 0.1 }
+          - { name: count, label: "Liczba opinii w Google", widget: number, value_type: int, min: 0 }
+          - { name: googleUrl, label: "Link do wizytówki Google", widget: string, required: false }
+          - { name: reviewUrl, label: "Link „Wystaw opinię” (z wizytówki Google)", widget: string, required: false }
+          - name: reviews
+            label: "Wybrane opinie"
+            label_singular: opinię
+            widget: list
+            summary: "{{fields.author}} – {{fields.rating}}★"
+            fields:
+              - { name: author, label: Autor, widget: string }
+              - { name: rating, label: "Gwiazdki (1–5)", widget: number, value_type: int, min: 1, max: 5, default: 5 }
+              - { name: date, label: "Data (np. wrzesień 2026)", widget: string, required: false }
+              - { name: text, label: "Treść opinii", widget: text }
+
+      - name: settings
+        label: "⚙️ Dane firmy i kontakt"
+        file: content/settings.json
+        fields:
+          - { name: name, label: "Nazwa firmy", widget: string }
+          - { name: owner, label: "Imię i nazwisko (stopka)", widget: string, required: false }
+          - { name: logo, label: "Logo (okrągłe; puste = logo rysowane)", widget: image, required: false }
+          - { name: tagline, label: "Hasło odręczne na górze", widget: string, required: false }
+          - { name: heroTitle, label: "Duży tytuł na górze", widget: string, required: false }
+          - { name: heroText, label: "Tekst powitalny", widget: text, required: false }
+          - { name: slogan, label: "Hasło odręczne w kontakcie", widget: string, required: false }
+          - { name: contactText, label: "Tekst w sekcji kontakt", widget: text, required: false }
+          - { name: heroImage, label: "Zdjęcie główne", widget: image, required: false }
+          - { name: phone, label: Telefon, widget: string, required: false }
+          - { name: email, label: E-mail, widget: string, required: false }
+          - { name: address, label: Adres, widget: string, required: false }
+          - { name: area, label: "Zasięg dowozu", widget: string, required: false }
+          - { name: facebook, label: "Link do Facebooka", widget: string, required: false }
+          - { name: instagram, label: "Link do Instagrama", widget: string, required: false }

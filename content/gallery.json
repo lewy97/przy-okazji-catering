@@ -1,0 +1,13 @@
+{
+  "photos": [
+    { "image": "/images/ig/bufet.jpg", "alt": "Bufet z tartaletkami, sushi i przekąskami" },
+    { "image": "/images/ig/finger-food.jpg", "alt": "Taca finger food – roladki, koreczki, francuskie przekąski" },
+    { "image": "/images/ig/party-sushi-burgery.jpg", "alt": "Garden party – mini burgery i sushi" },
+    { "image": "/images/ig/wrapy.jpg", "alt": "Kolorowe wrapy z warzywami" },
+    { "image": "/images/ig/kurczak-panko.jpg", "alt": "Kurczak w panko z sosem musztardowym" },
+    { "image": "/images/ig/naked-cake.jpg", "alt": "Naked cake z owocami" },
+    { "image": "/images/ig/sernik.jpg", "alt": "Sernik z pomarańczą" },
+    { "image": "/images/ig/piernik.jpg", "alt": "Świąteczny piernik" },
+    { "image": "/images/ig/tarta.jpg", "alt": "Tarta ze szparagami i pomidorkami" }
+  ]
+}

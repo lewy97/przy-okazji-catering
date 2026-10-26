@@ -1,0 +1,133 @@
+{
+  "menus": [
+    {
+      "title": "Finger food",
+      "occasion": "Imprezy",
+      "price": "wycena indywidualna",
+      "description": "Małe przekąski na jeden kęs – idealne na stół szwedzki.",
+      "image": "/images/ig/finger-food.jpg",
+      "dishes": [
+        {
+          "name": "Koreczki caprese",
+          "ingredients": "mozzarella, pomidorki koktajlowe, bazylia, oliwa"
+        },
+        {
+          "name": "Roladki z tortilli",
+          "ingredients": "tortilla, szynka, serek, sałata, papryka, ogórek, oliwki"
+        },
+        {
+          "name": "Ślimaczki z ciasta francuskiego",
+          "ingredients": "ciasto francuskie, ser, szpinak, szynka"
+        },
+        {
+          "name": "Tartaletki",
+          "ingredients": "kruche spody, jajko, śmietanka, ser, warzywa"
+        }
+      ]
+    },
+    {
+      "title": "Party Box",
+      "occasion": "Urodziny / Wieczory kawalerskie",
+      "price": "wycena indywidualna",
+      "description": "Gotowe pudła pełne przekąsek na wieczory panieńskie, kawalerskie i urodziny – otwierasz i impreza gotowa.",
+      "image": "/images/ig/wrapy.jpg",
+      "dishes": [
+        {
+          "name": "Pudło w panko",
+          "ingredients": "kurczak, krewetki, pieczarki i warzywa w chrupiącej panierce panko, sosy"
+        },
+        {
+          "name": "Mini croissanty wytrawne",
+          "ingredients": "croissanty, prosciutto, mozzarella, rukola"
+        },
+        {
+          "name": "Sushi burgery",
+          "ingredients": "ryż do sushi, nori, łosoś, awokado, ogórek, serek"
+        },
+        {
+          "name": "Owoce egzotyczne",
+          "ingredients": "arbuz, melon, kiwi, ananas"
+        },
+        {
+          "name": "Babeczki",
+          "ingredients": "kruche babeczki, krem, owoce sezonowe"
+        }
+      ]
+    },
+    {
+      "title": "Grill i Garden Party",
+      "occasion": "Grill / Garden Party",
+      "price": "wycena indywidualna",
+      "description": "Wszystko na przyjęcie w ogrodzie – od szaszłyków po desery.",
+      "image": "/images/ig/party-sushi-burgery.jpg",
+      "dishes": [
+        {
+          "name": "Szaszłyki z grilla",
+          "ingredients": "mięso marynowane, papryka, cebula, cukinia"
+        },
+        {
+          "name": "Karkówka i kiełbaski",
+          "ingredients": "karkówka w marynacie, kiełbaski grillowe"
+        },
+        {
+          "name": "Warzywa grillowane",
+          "ingredients": "cukinia, bakłażan, papryka, pieczarki, oliwa ziołowa"
+        },
+        {
+          "name": "Sałatka grecka i dipy",
+          "ingredients": "pomidory, ogórek, oliwki, feta, tzatziki"
+        },
+        {
+          "name": "Desery",
+          "ingredients": "owoce sezonowe, ciasto, deser w pucharkach"
+        }
+      ]
+    },
+    {
+      "title": "Catering na plan zdjęciowy",
+      "occasion": "Plan zdjęciowy / Firmy",
+      "price": "wycena indywidualna",
+      "description": "Kompletna oferta cateringowa w formie bufetu lub pakietów. Świeżość i smak dla Twojej ekipy!",
+      "image": "/images/ig/kurczak-panko.jpg",
+      "dishes": [
+        {
+          "name": "Bowle",
+          "ingredients": "kasza lub ryż, kurczak / tofu, warzywa sezonowe, sos"
+        },
+        {
+          "name": "Bajgle i croissanty",
+          "ingredients": "pieczywo, wędliny, sery, warzywa"
+        },
+        {
+          "name": "Sałatki",
+          "ingredients": "mix sałat, warzywa, dressing"
+        },
+        {
+          "name": "Soki i lemoniady",
+          "ingredients": "świeżo wyciskane owoce i warzywa"
+        }
+      ]
+    },
+    {
+      "title": "Ciasta i torty",
+      "occasion": "Ciasta",
+      "price": "wycena indywidualna",
+      "description": "Domowe wypieki na urodziny, święta i każdą słodką okazję.",
+      "image": "/images/ig/naked-cake.jpg",
+      "dishes": [
+        {
+          "name": "Naked cake z owocami",
+          "ingredients": "biszkopt, krem, borówki, porzeczki, śliwki, morele"
+        },
+        {
+          "name": "Sernik",
+          "ingredients": "twaróg, jajka, wanilia, kruchy spód, suszona pomarańcza"
+        },
+        {
+          "name": "Piernik",
+          "ingredients": "mąka, miód, przyprawa korzenna, cukier puder"
+        }
+      ]
+    }
+  ]
+}
