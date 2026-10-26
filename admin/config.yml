@@ -1,4 +1,4 @@
-# Panel edycji strony (Decap CMS) – dostępny pod adresem twojadomena.pl/admin
+# Panel edycji strony (Decap CMS) – dostępny pod adresem cateringprzyokazji.pl/admin
 backend:
   name: github
   repo: lewy97/przy-okazji-catering

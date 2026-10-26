@@ -32,7 +32,7 @@ images/uploads/                  – zdjęcia wgrane z panelu
 ## Krok 2 – Netlify (5 min)
 
 1. Wejdź na https://app.netlify.com i zaloguj się przez GitHub.
-2. „Add new site → Import an existing project → GitHub” → wybierz repozytorium `catering`.
+2. „Add new site → Import an existing project → GitHub” → wybierz repozytorium `przy-okazji-catering`.
 3. Build command: zostaw puste. Publish directory: `/` (lub puste). Kliknij **Deploy**.
 4. Strona działa pod adresem typu `nazwa.netlify.app`.
 
