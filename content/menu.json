@@ -64,6 +64,22 @@
         {
           "name": "Mięsa na grill",
           "ingredients": "Karkówka w marynacie pikantnej lub miodowo-musztardowej, Filet z kurczaka w marynacie ziołowo-maślanej lub słodko-pikantnej"
+        },
+        {
+          "name": "Szaszłyki ",
+          "ingredients": "Z kurczakiem, halloumi, tofu lub krewetkami z dodatkiem kolorowych warzyw i owoców"
+        },
+        {
+          "name": "Sałatki",
+          "ingredients": "Klasyczna Grecka, Chrupiący Cezar, Wege Gyros, Ziemniaczana oraz Lekka Ziołowa z młodej kapusty, rzodkiewki i awokado"
+        },
+        {
+          "name": "Dodatki",
+          "ingredients": "Tzatzyki, Chimichuri, Grillowane warzywa, Salsa z ananasa"
+        },
+        {
+          "name": "Desery",
+          "ingredients": "Galaretka mango, Rolada bezowa, Sałatka owocowa, Malinowe tiramisu"
         }
       ]
     },
