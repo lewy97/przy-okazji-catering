@@ -267,8 +267,26 @@ function renderReviews(r) {
         </div>
       </div>
       ${stars(Number(v.rating) || 5)}
-      <p>${esc(v.text)}</p>
+      <p class="review-text">${esc(v.text)}</p>
+      <button type="button" class="review-more" hidden>Pokaż więcej</button>
     </article>`).join("");
+
+  // Długie opinie są skrócone; przycisk pokazujemy tylko tam, gdzie tekst się nie mieści
+  const reviewsEl = document.getElementById("reviews");
+  const fitButtons = () => reviewsEl.querySelectorAll(".review").forEach((card) => {
+    const text = card.querySelector(".review-text");
+    const btn = card.querySelector(".review-more");
+    if (!text.classList.contains("expanded")) btn.hidden = text.scrollHeight <= text.clientHeight + 2;
+  });
+  fitButtons();
+  document.fonts?.ready.then(fitButtons);
+  window.addEventListener("resize", fitButtons);
+  reviewsEl.addEventListener("click", (e) => {
+    const btn = e.target.closest(".review-more");
+    if (!btn) return;
+    const open = btn.previousElementSibling.classList.toggle("expanded");
+    btn.textContent = open ? "Pokaż mniej" : "Pokaż więcej";
+  });
 
   const links = [];
   if (r.googleUrl) links.push(`<a class="btn btn-ghost" href="${esc(r.googleUrl)}" target="_blank" rel="noopener">Wszystkie opinie w Google</a>`);
