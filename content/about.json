@@ -1,10 +1,19 @@
 {
   "title": "O mnie",
   "photo": "",
-  "text": "Cześć, jestem Karolina! Tworzę Catering Przy okazji! – pyszne jedzenie na Twoją okazję.\n\nPrzygotowuję finger foody, party boxy, ciasta i bufety na imprezy rodzinne, firmowe i plany zdjęciowe. Stawiam na świeże składniki i piękne podanie.\n\nDziałam w Bliznem Jasińskiego, dowożę na terenie Warszawy i okolic. Napisz lub zadzwoń – razem dobierzemy menu do Twojej okazji.",
+  "text": "Cześć, jestem Karolina! Tworzę Catering Przy okazji! – pyszne jedzenie na Twoją okazję.\n\nCieszę się, że tu jesteś!\n\nOd ponad 10 lat sercem jestem w gastronomii i to właśnie praca w restauracji uświadomiła mi coś bardzo ważnego: moją prawdziwą pasją jest sztuka gościnności. Uwielbiam przyjmować gości, dbać o ich komfort i serwować jedzenie, które sprawia autentyczną radość.\n\nFascynuje mnie historia kuchni - to, skąd biorą się tradycyjne smaki i jak niezwykłą mają moc przenoszenia nas w czasie. Sama do dziś pamiętam niedzielne gołąbki u babci, szarlotkę z bezą i kruszonką od cioci, świąteczną roladę z kluskami śląskimi czy biszkopt z galaretką w upalny, wakacyjny dzień. To nie były tylko posiłki, to były chwile, do których wracam z uśmiechem.\n\nŚwiat pędzi, ale czas spędzony z bliskimi jest bezcenny. Zależy mi na tym, aby zapewnić Waszym spotkaniom smakową oprawę, do której będziecie wracać pamięcią po latach. Aby PRZY OKAZJI wspólnego świętowania, obiadu czy grilla powstały wspomnienia równie trwałe jak te z naszego dzieciństwa.\n\nChcę, aby zapach pieczonego ciasta pomarańczowego za kilka lat natychmiast przywołał w Waszej pamięci ciepłe, leniwe popołudnie spędzone w gronie najbliższych, a znajomy aromat świątecznych dań przypominał moment otwierania prezentów w wigilijny wieczór.\n\nPozwól mi zaopiekować się Twoimi gośćmi tak, jak sama chciałabym być przyjęta. Zapraszam do mojego świata!",
   "highlights": [
-    { "number": "Finger food", "label": "przekąski na każdą imprezę" },
-    { "number": "Party boxy", "label": "gotowe do podania" },
-    { "number": "Ciasta", "label": "domowe wypieki" }
+    {
+      "number": "Przyjęcia rodzinne",
+      "label": "Od przystawki po deser.  Kompleksowa oprawa chrzcin, komunii, jubileuszy i domowych obiadów – tak, abyś na własnym przyjęciu mógł po prostu być gościem."
+    },
+    {
+      "number": "Imprezy okolicznościowe",
+      "label": "Wieczory panieńskie, urodziny, kinderbale.  Pyszne finger foody, słodkie stoły i przekąski, które idealnie dopasują się do klimatu Twojej imprezy i zachwycą gości."
+    },
+    {
+      "number": "Wydarzenia firmowe",
+      "label": "Spotkania biznesowe, szkolenia, plany zdjęciowe.  Smaczny, estetyczny i punktualny catering, który podkręci atmosferę pracy, przerwy kawowej czy długiego dnia na planie."
+    }
   ]
 }
