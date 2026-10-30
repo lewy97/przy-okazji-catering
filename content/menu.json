@@ -55,31 +55,15 @@
       ]
     },
     {
-      "title": "Grill i Garden Party",
+      "title": "Spotkania w ogrodzie",
       "occasion": "Grill / Garden Party",
       "price": "wycena indywidualna",
-      "description": "Wszystko na przyjęcie w ogrodzie – od szaszłyków po desery.",
+      "description": "Wszystko, czego trzeba do udanego spotkania pod chmurką: wyśmienite dania główne na grill, świeże dodatki warzywne, orzeźwiające sałatki, przekąski oraz lekkie, letnie desery.",
       "image": "/images/ig/party-sushi-burgery.jpg",
       "dishes": [
         {
-          "name": "Szaszłyki z grilla",
-          "ingredients": "mięso marynowane, papryka, cebula, cukinia"
-        },
-        {
-          "name": "Karkówka i kiełbaski",
-          "ingredients": "karkówka w marynacie, kiełbaski grillowe"
-        },
-        {
-          "name": "Warzywa grillowane",
-          "ingredients": "cukinia, bakłażan, papryka, pieczarki, oliwa ziołowa"
-        },
-        {
-          "name": "Sałatka grecka i dipy",
-          "ingredients": "pomidory, ogórek, oliwki, feta, tzatziki"
-        },
-        {
-          "name": "Desery",
-          "ingredients": "owoce sezonowe, ciasto, deser w pucharkach"
+          "name": "Mięsa na grill",
+          "ingredients": "Karkówka w marynacie pikantnej lub miodowo-musztardowej, Filet z kurczaka w marynacie ziołowo-maślanej lub słodko-pikantnej"
         }
       ]
     },
