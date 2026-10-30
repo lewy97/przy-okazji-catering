@@ -26,35 +26,6 @@
       ]
     },
     {
-      "title": "Party Box",
-      "occasion": "Urodziny / Wieczory kawalerskie",
-      "price": "wycena indywidualna",
-      "description": "Gotowe pudła pełne przekąsek na wieczory panieńskie, kawalerskie i urodziny – otwierasz i impreza gotowa.",
-      "image": "/images/ig/wrapy.jpg",
-      "dishes": [
-        {
-          "name": "Pudło w panko",
-          "ingredients": "kurczak, krewetki, pieczarki i warzywa w chrupiącej panierce panko, sosy"
-        },
-        {
-          "name": "Mini croissanty wytrawne",
-          "ingredients": "croissanty, prosciutto, mozzarella, rukola"
-        },
-        {
-          "name": "Sushi burgery",
-          "ingredients": "ryż do sushi, nori, łosoś, awokado, ogórek, serek"
-        },
-        {
-          "name": "Owoce egzotyczne",
-          "ingredients": "arbuz, melon, kiwi, ananas"
-        },
-        {
-          "name": "Babeczki",
-          "ingredients": "kruche babeczki, krem, owoce sezonowe"
-        }
-      ]
-    },
-    {
       "title": "Spotkania w ogrodzie",
       "occasion": "Grill / Garden Party",
       "price": "wycena indywidualna",
