@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog – Catering Przy okazji!</title>
+  <meta name="description" content="Blog cateringu Przy okazji! – przepisy, inspiracje i relacje z przyjęć.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-page="blog" data-title="Blog">
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="/" class="brand">
+        <span class="logo-mark logo-small"></span>
+        <span class="brand-name" data-bind="name">Przy okazji!</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="/oferta/">Oferta</a>
+        <a href="/#galeria">Galeria</a>
+        <a href="/#o-mnie">O mnie</a>
+        <a href="/blog/" class="active" aria-current="page">Blog</a>
+        <a href="/#opinie">Opinie</a>
+        <a href="#kontakt" class="btn btn-small">Zamów</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="script page-hero-script">Z mojej kuchni</p>
+        <h1>Blog</h1>
+        <div class="divider"></div>
+        <p class="section-sub">Inspiracje, przepisy i kulisy przygotowań – wszystko, co dzieje się PRZY OKAZJI.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="wrap">
+        <div class="blog-grid" id="blog-list"></div>
+      </div>
+    </section>
+
+    <div class="contact-strip">
+      <div class="wrap contact-strip-inner" id="contact-strip"></div>
+    </div>
+
+    <section id="kontakt" class="section contact-section">
+      <div class="wrap contact">
+        <span class="logo-mark logo-contact"></span>
+        <h2>Zamów catering</h2>
+        <div class="divider"></div>
+        <p class="contact-lead" data-bind="contactText">Napisz lub zadzwoń – podaj datę, liczbę gości i rodzaj okazji, a przygotuję dla Ciebie propozycję.</p>
+        <ul class="contact-list" id="contact-list"></ul>
+        <p class="script contact-script" data-bind="slogan"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year"></span> <span data-bind="name"></span> · <span data-bind="owner"></span></div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

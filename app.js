@@ -96,7 +96,8 @@ function setPhoto(el, url, photoClass) {
 
 function renderSettings(s) {
   customLogo = s.logo || "";
-  if (document.body.dataset.page === "oferta") document.title = `Oferta – ${s.name || "Catering"}`;
+  const pageTitle = document.body.dataset.title;
+  if (pageTitle) document.title = `${pageTitle} – ${s.name || "Catering"}`;
   else document.title = s.name ? `${s.name} – ${s.tagline || "catering"}` : "Catering";
   document.querySelectorAll("[data-bind]").forEach((el) => {
     const v = s[el.dataset.bind];
@@ -213,6 +214,65 @@ function renderTeaser(data) {
   document.querySelectorAll("#offer-tiles .logo-mark").forEach((el) => (el.innerHTML = logoHtml()));
 }
 
+// --- Blog ---
+
+const sortedPosts = (data) => (data.posts || [])
+  .filter((p) => p.title)
+  .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+
+const postDate = (d) => {
+  const t = d && new Date(`${String(d).slice(0, 10)}T12:00:00`);
+  return t && !isNaN(t) ? t.toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" }) : "";
+};
+
+const postCard = (p) => `
+  <a class="blog-card" href="/blog/wpis/?w=${encodeURIComponent(menuSlug(p).replace(/^menu-/, ""))}">
+    ${p.image
+      ? `<span class="blog-card-img" style="background-image:url('${esc(encodeURI(p.image))}')"></span>`
+      : `<span class="blog-card-img placeholder-img"><span class="logo-mark"></span></span>`}
+    <span class="blog-card-body">
+      ${p.date ? `<span class="blog-date">${esc(postDate(p.date))}</span>` : ""}
+      <span class="blog-card-title">${esc(p.title)}</span>
+      ${p.excerpt ? `<span class="blog-excerpt">${esc(p.excerpt)}</span>` : ""}
+      <span class="blog-read">Czytaj dalej →</span>
+    </span>
+  </a>`;
+
+function renderBlogList(data, el, limit) {
+  const posts = sortedPosts(data).slice(0, limit || undefined);
+  el.innerHTML = posts.length ? posts.map(postCard).join("") : `<p class="empty">Wkrótce pojawią się tu pierwsze wpisy.</p>`;
+  el.querySelectorAll(".logo-mark").forEach((m) => (m.innerHTML = logoHtml()));
+  return posts.length;
+}
+
+// Treść wpisu jest w Markdownie (z panelu); bez bibliotek pokazujemy ją jako zwykłe akapity
+function markdownHtml(md) {
+  if (window.marked && window.DOMPurify) return DOMPurify.sanitize(marked.parse(md || ""));
+  return String(md || "").split(/\n\s*\n/).map((p) => `<p>${esc(p).replace(/\n/g, "<br>")}</p>`).join("");
+}
+
+function renderPost(data) {
+  const wrap = document.querySelector("#post .post-wrap");
+  const slug = new URLSearchParams(location.search).get("w");
+  const post = sortedPosts(data).find((p) => menuSlug(p).replace(/^menu-/, "") === slug);
+  const back = `<p class="post-back"><a href="/blog/">← Wszystkie wpisy</a></p>`;
+  if (!post) {
+    wrap.innerHTML = back + `<p class="empty">Nie znaleziono tego wpisu.</p>`;
+    return;
+  }
+  document.title = `${post.title} – Blog`;
+  wrap.innerHTML = `${back}
+    <header class="post-head">
+      ${post.date ? `<p class="blog-date">${esc(postDate(post.date))}</p>` : ""}
+      <h1>${esc(post.title)}</h1>
+      <div class="divider"></div>
+    </header>
+    ${post.image ? `<img class="post-img" src="${esc(encodeURI(post.image))}" alt="">` : ""}
+    <div class="post-body">${markdownHtml(post.body)}</div>
+    <p class="post-cta"><a href="/#kontakt" class="btn">Zamów catering</a></p>`;
+  wrap.querySelectorAll(".divider").forEach((d) => (d.innerHTML = dividerSvg()));
+}
+
 function renderGallery(g) {
   const photos = (g.photos || []).filter((p) => p.image);
   if (!photos.length) {
@@ -310,8 +370,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const has = (id) => document.getElementById(id);
 
-Promise.all(["settings", "menu", "gallery", "about", "reviews"].map((n) => load(n).catch(() => ({}))))
-  .then(([settings, menu, gallery, about, reviews]) => {
+Promise.all(["settings", "menu", "gallery", "about", "reviews", "blog"].map((n) => load(n).catch(() => ({}))))
+  .then(([settings, menu, gallery, about, reviews, blog]) => {
     renderSettings(settings);
     renderGallery(gallery);
     if (has("about-text")) renderAbout(about);
@@ -319,4 +379,7 @@ Promise.all(["settings", "menu", "gallery", "about", "reviews"].map((n) => load(
     paintDecorations();
     if (has("menu-grid")) renderMenu(menu);
     if (has("offer-tiles")) renderTeaser(menu);
+    if (has("blog-latest") && renderBlogList(blog, has("blog-latest"), 3)) has("blog").hidden = false;
+    if (has("blog-list")) renderBlogList(blog, has("blog-list"));
+    if (has("post")) renderPost(blog);
   });

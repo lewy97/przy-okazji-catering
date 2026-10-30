@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "title": "Witamy na blogu Przy okazji!",
+      "date": "2026-10-30",
+      "image": "/images/ig/bufet.jpg",
+      "excerpt": "Przykładowy wpis – podmień go w panelu /admin w sekcji „Blog”.",
+      "body": "To przykładowy wpis, który pokazuje, jak będzie wyglądał blog.\n\nW panelu **/admin → 📝 Blog** możesz:\n\n- dodać nowy wpis przyciskiem „Dodaj wpis”,\n- wpisać tytuł, datę i krótki wstęp,\n- dodać zdjęcie główne,\n- napisać treść – z pogrubieniem, listami, nagłówkami i zdjęciami.\n\nPo kliknięciu „Opublikuj” wpis pojawi się na stronie po około minucie."
+    }
+  ]
+}

@@ -74,6 +74,23 @@ collections:
               - { name: number, label: "Liczba (np. 10+)", widget: string }
               - { name: label, label: "Opis", widget: string }
 
+      - name: blog
+        label: "📝 Blog"
+        file: content/blog.json
+        fields:
+          - name: posts
+            label: Wpisy
+            label_singular: wpis
+            widget: list
+            add_to_top: true
+            summary: "{{fields.date}} – {{fields.title}}"
+            fields:
+              - { name: title, label: Tytuł, widget: string }
+              - { name: date, label: Data, widget: datetime, format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+              - { name: image, label: "Zdjęcie główne", widget: image, required: false }
+              - { name: excerpt, label: "Krótki wstęp (widoczny na liście wpisów)", widget: text, required: false }
+              - { name: body, label: "Treść wpisu", widget: markdown }
+
       - name: reviews
         label: "⭐ Opinie Google"
         file: content/reviews.json
