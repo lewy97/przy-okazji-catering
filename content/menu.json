@@ -99,6 +99,24 @@
           "ingredients": "mąka, miód, przyprawa korzenna, cukier puder"
         }
       ]
+    },
+    {
+      "graphics": [
+        {
+          "image": "/images/uploads/2.jpg"
+        },
+        {
+          "image": "/images/uploads/3.jpg"
+        },
+        {
+          "image": "/images/uploads/4.jpg"
+        },
+        {
+          "image": "/images/uploads/5.jpg"
+        }
+      ],
+      "title": "Wigilia Firmowa",
+      "occasion": "Święta"
     }
   ]
 }
