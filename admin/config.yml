@@ -36,9 +36,20 @@ collections:
                 options: ["Imprezy", "Urodziny / Wieczory kawalerskie", "Plan zdjęciowy / Firmy", "Grill / Garden Party", "Ciasta", "Komunia / Chrzciny", "Wesele", "Święta", "Inne"]
               - { name: price, label: "Cena (np. od 129 zł / os.)", widget: string, required: false }
               - { name: description, label: "Krótki opis", widget: text, required: false }
-              - { name: image, label: "Zdjęcie", widget: image, required: false }
+              - { name: image, label: "Zdjęcie na kartę", widget: image, required: false }
+              - name: graphics
+                label: "Grafiki z ofertą"
+                label_singular: grafikę
+                widget: list
+                required: false
+                summary: "{{fields.alt}}"
+                hint: "Grafiki widoczne w ofercie – klient powiększa je kliknięciem. Kolejność ustawisz przeciągając."
+                fields:
+                  - { name: image, label: Grafika, widget: image }
+                  - { name: alt, label: "Krótki opis (np. Przekąski na półmiskach)", widget: string, required: false }
               - name: dishes
-                label: Dania
+                label: "Dania i składniki (opcjonalnie)"
+                required: false
                 label_singular: danie
                 widget: list
                 summary: "{{fields.name}}"

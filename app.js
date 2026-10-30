@@ -141,6 +141,67 @@ const menuSlug = (m) => "menu-" + String(m.title || "")
   .normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ł/g, "l")
   .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
+// Grafiki z ofertą (plakaty z menu) przypisane do danej pozycji oferty
+const menuGraphics = (m) => (m.graphics || []).filter((g) => g.image);
+// Zdjęcie na kartę; gdy go brak – pierwsza grafika z ofertą
+const menuCover = (m) => m.image || (menuGraphics(m)[0] || {}).image || "";
+// „2 grafiki”, „5 grafik”, „22 grafiki”
+const graphicsLabel = (n) => {
+  const few = n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14);
+  return `${n} ${few ? "grafiki" : "grafik"}`;
+};
+
+// Powiększenie grafik: jedno okno na całą stronę, z przewijaniem strzałkami i gestem
+const lightbox = (() => {
+  let items = [], index = 0, box = null, touchX = null;
+  const show = () => {
+    const g = items[index];
+    box.querySelector(".lb-img").src = g.image;
+    box.querySelector(".lb-img").alt = g.alt || "";
+    box.querySelector(".lb-caption").textContent = [g.alt, items.length > 1 ? `${index + 1} / ${items.length}` : ""].filter(Boolean).join(" · ");
+    box.querySelectorAll(".lb-nav").forEach((b) => (b.hidden = items.length < 2));
+  };
+  const step = (d) => { index = (index + d + items.length) % items.length; show(); };
+  const close = () => { box.classList.remove("open"); document.body.style.overflow = ""; };
+  const build = () => {
+    box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.innerHTML = `
+      <button type="button" class="lb-close" aria-label="Zamknij">×</button>
+      <button type="button" class="lb-nav lb-prev" aria-label="Poprzednia">‹</button>
+      <figure class="lb-figure"><img class="lb-img" alt=""><figcaption class="lb-caption"></figcaption></figure>
+      <button type="button" class="lb-nav lb-next" aria-label="Następna">›</button>`;
+    box.addEventListener("click", (e) => {
+      if (e.target.closest(".lb-prev")) step(-1);
+      else if (e.target.closest(".lb-next")) step(1);
+      else if (e.target.closest(".lb-close") || !e.target.closest(".lb-img")) close();
+    });
+    box.addEventListener("touchstart", (e) => (touchX = e.touches[0].clientX), { passive: true });
+    box.addEventListener("touchend", (e) => {
+      const dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50 && items.length > 1) step(dx < 0 ? 1 : -1);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (!box.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(1);
+    });
+    document.body.appendChild(box);
+  };
+  return (list, start) => {
+    if (!box) build();
+    items = list;
+    index = start || 0;
+    show();
+    box.classList.add("open");
+    document.body.style.overflow = "hidden";
+    box.querySelector(".lb-close").focus();
+  };
+})();
+
 function renderMenu(data) {
   const menus = data.menus || [];
   const grid = document.getElementById("menu-grid");
@@ -153,16 +214,27 @@ function renderMenu(data) {
       grid.innerHTML = `<p class="empty">Wkrótce pojawią się tu propozycje menu.</p>`;
       return;
     }
-    grid.innerHTML = list.map((m) => `
-      <article class="menu-card" id="${menuSlug(m)}">
-        ${m.image
-          ? `<div class="menu-card-img" style="background-image:url('${esc(encodeURI(m.image))}')"></div>`
+    grid.innerHTML = list.map((m) => {
+      const graphics = menuGraphics(m);
+      const cover = menuCover(m);
+      return `
+      <article class="menu-card" id="${menuSlug(m)}" data-menu="${menus.indexOf(m)}">
+        ${cover
+          ? `<div class="menu-card-img${m.image ? "" : " is-graphic"}" style="background-image:url('${esc(encodeURI(cover))}')"></div>`
           : `<div class="menu-card-img placeholder-img"><span class="logo-mark"></span></div>`}
         <div class="menu-card-body">
           ${m.occasion ? `<span class="menu-tag">${esc(m.occasion)}</span>` : ""}
           <h3>${esc(m.title)}</h3>
           ${m.price ? `<p class="menu-price">${esc(m.price)}</p>` : ""}
           ${m.description ? `<p class="menu-desc">${esc(m.description)}</p>` : ""}
+          ${graphics.length ? `
+            <div class="menu-graphics">
+              ${graphics.map((g, i) => `
+                <button type="button" class="menu-graphic" data-i="${i}" aria-label="Powiększ: ${esc(g.alt || `grafika ${i + 1}`)}">
+                  <img src="${esc(encodeURI(g.image))}" alt="${esc(g.alt || "")}" loading="lazy">
+                </button>`).join("")}
+            </div>
+            <button type="button" class="menu-graphics-open" data-i="0">Zobacz ofertę${graphics.length > 1 ? ` (${graphicsLabel(graphics.length)})` : ""}</button>` : ""}
           ${(m.dishes || []).length ? `
             <details>
               <summary>Dania i składniki (${m.dishes.length})</summary>
@@ -175,9 +247,17 @@ function renderMenu(data) {
               </ul>
             </details>` : ""}
         </div>
-      </article>`).join("");
+      </article>`;
+    }).join("");
     grid.querySelectorAll(".logo-mark").forEach((el) => (el.innerHTML = logoHtml()));
   };
+
+  grid.addEventListener("click", (e) => {
+    const btn = e.target.closest(".menu-graphic, .menu-graphics-open, .menu-card-img.is-graphic");
+    if (!btn) return;
+    const m = menus[btn.closest(".menu-card").dataset.menu];
+    lightbox(menuGraphics(m), Number(btn.dataset.i) || 0);
+  });
 
   if (occasions.length > 1) {
     filters.innerHTML = [`<button class="filter active" data-o="">Wszystkie</button>`]
@@ -206,8 +286,8 @@ function renderTeaser(data) {
   const menus = data.menus || [];
   document.getElementById("offer-tiles").innerHTML = menus.map((m) => `
     <a class="offer-tile" href="/oferta/#${menuSlug(m)}">
-      ${m.image
-        ? `<span class="offer-tile-img" style="background-image:url('${esc(encodeURI(m.image))}')"></span>`
+      ${menuCover(m)
+        ? `<span class="offer-tile-img" style="background-image:url('${esc(encodeURI(menuCover(m)))}')"></span>`
         : `<span class="offer-tile-img placeholder-img"><span class="logo-mark"></span></span>`}
       <span class="offer-tile-title">${esc(m.title)}</span>
     </a>`).join("");
