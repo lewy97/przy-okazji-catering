@@ -1,11 +1,11 @@
 {
   "posts": [
     {
-      "title": "Witamy na blogu Przy okazji!",
+      "title": "Jesienny aromat polskiej tradycji: Rozgrzewające smaki z domowej spiżarni",
       "date": "2026-10-30",
       "image": "/images/ig/bufet.jpg",
-      "excerpt": "Przykładowy wpis – podmień go w panelu /admin w sekcji „Blog”.",
-      "body": "To przykładowy wpis, który pokazuje, jak będzie wyglądał blog.\n\nW panelu **/admin → 📝 Blog** możesz:\n\n- dodać nowy wpis przyciskiem „Dodaj wpis”,\n- wpisać tytuł, datę i krótki wstęp,\n- dodać zdjęcie główne,\n- napisać treść – z pogrubieniem, listami, nagłówkami i zdjęciami.\n\nPo kliknięciu „Opublikuj” wpis pojawi się na stronie po około minucie."
+      "excerpt": "Jesień ma w sobie coś niezwykle przytulnego. Kiedy wieczory stają się chłodniejsze, nasza kuchnia naturalnie się zmienia - szukamy smaków ciepłych, sycących i takich, które po prostu poprawiają humor po zimnym spacerze. To czas, kiedy w domu pachnie najładniej, a posiłki znów skupiają nas wokół wspólnego stołu.\n",
+      "body": "Dawniej jesień była czasem intensywnego szykowania się na zimę. Kiedyś nie dało się po prostu iść do sklepu po świeże warzywa w środku stycznia, dlatego wszystko opierało się na tym, co udało się zamknąć w słoikach i beczkach. Stąd wzięła się nasza piękna tradycja kiszenia, marynowania i suszenia. Jesienne dni miały swój naturalny rytm: rano szło się do lasu na grzyby, które potem suszyły się w całym domu, a w kuchniach trwało wielkie szatkowanie kapusty.\n\nZ tych zapasów powstają klasyki, do których tak chętnie wracamy:\n\n* Prawdziwa zupa grzybowa z suszonych borowików i podgrzybków,\n* Gorąca, konkretna kwaśnica na wędzonce i domowej kapuście kiszonej,\n* Domowy bigos, w którym kwaśna kapusta idealnie łączy się z nutą suszonych grzybów i śliwek.\n\n\n\nPolska jesień to jednak nie tylko wytrawne, głębokie smaki, ale też słodki, owocowy aromat. W sadach dojrzewają ostatnie owoce, które trafiają zarówno do dań głównych, jak i deserów. Kuchnia tej pory roku pachnie puszystymi plackami i drożdżówkami z dojrzałą węgierką, domowym kompotem ze słodkich gruszek oraz wyrazistą żurawiną z dodatkiem jabłek, serwowaną jako idealne dopełnienie pieczonych mięs.\n\n\n\nCo ciekawe, ta tradycja świetnie odnajduje się też w nowoczesnym wydaniu. Lubimy przełamywać klasykę czymś wyrazistym, jak choćby gęsty krem z dyni doprawiony imbirem i chili. A w kubkach z kawą czy herbatą niepodzielnie królują aromaty cynamonu, goździków i kardamonu, które idealnie dopełniają ten jesienny klimat."
     }
   ]
 }
