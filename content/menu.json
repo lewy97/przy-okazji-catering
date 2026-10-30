@@ -1,106 +1,6 @@
 {
   "menus": [
     {
-      "title": "Finger food",
-      "occasion": "Imprezy",
-      "price": "wycena indywidualna",
-      "description": "Małe przekąski na jeden kęs – idealne na stół szwedzki.",
-      "image": "/images/ig/finger-food.jpg",
-      "dishes": [
-        {
-          "name": "Koreczki caprese",
-          "ingredients": "mozzarella, pomidorki koktajlowe, bazylia, oliwa"
-        },
-        {
-          "name": "Roladki z tortilli",
-          "ingredients": "tortilla, szynka, serek, sałata, papryka, ogórek, oliwki"
-        },
-        {
-          "name": "Ślimaczki z ciasta francuskiego",
-          "ingredients": "ciasto francuskie, ser, szpinak, szynka"
-        },
-        {
-          "name": "Tartaletki",
-          "ingredients": "kruche spody, jajko, śmietanka, ser, warzywa"
-        }
-      ]
-    },
-    {
-      "title": "Spotkania w ogrodzie",
-      "occasion": "Grill / Garden Party",
-      "price": "wycena indywidualna",
-      "description": "Wszystko, czego trzeba do udanego spotkania pod chmurką: wyśmienite dania główne na grill, świeże dodatki warzywne, orzeźwiające sałatki, przekąski oraz lekkie, letnie desery.",
-      "image": "/images/ig/party-sushi-burgery.jpg",
-      "dishes": [
-        {
-          "name": "Mięsa na grill",
-          "ingredients": "Karkówka w marynacie pikantnej lub miodowo-musztardowej, Filet z kurczaka w marynacie ziołowo-maślanej lub słodko-pikantnej"
-        },
-        {
-          "name": "Szaszłyki ",
-          "ingredients": "Z kurczakiem, halloumi, tofu lub krewetkami z dodatkiem kolorowych warzyw i owoców"
-        },
-        {
-          "name": "Sałatki",
-          "ingredients": "Klasyczna Grecka, Chrupiący Cezar, Wege Gyros, Ziemniaczana oraz Lekka Ziołowa z młodej kapusty, rzodkiewki i awokado"
-        },
-        {
-          "name": "Dodatki",
-          "ingredients": "Tzatzyki, Chimichuri, Grillowane warzywa, Salsa z ananasa"
-        },
-        {
-          "name": "Desery",
-          "ingredients": "Galaretka mango, Rolada bezowa, Sałatka owocowa, Malinowe tiramisu"
-        }
-      ]
-    },
-    {
-      "title": "Catering na plan zdjęciowy",
-      "occasion": "Plan zdjęciowy / Firmy",
-      "price": "wycena indywidualna",
-      "description": "Kompletna oferta cateringowa w formie bufetu lub pakietów. Świeżość i smak dla Twojej ekipy!",
-      "image": "/images/ig/kurczak-panko.jpg",
-      "dishes": [
-        {
-          "name": "Bowle",
-          "ingredients": "kasza lub ryż, kurczak / tofu, warzywa sezonowe, sos"
-        },
-        {
-          "name": "Bajgle i croissanty",
-          "ingredients": "pieczywo, wędliny, sery, warzywa"
-        },
-        {
-          "name": "Sałatki",
-          "ingredients": "mix sałat, warzywa, dressing"
-        },
-        {
-          "name": "Soki i lemoniady",
-          "ingredients": "świeżo wyciskane owoce i warzywa"
-        }
-      ]
-    },
-    {
-      "title": "Ciasta i torty",
-      "occasion": "Ciasta",
-      "price": "wycena indywidualna",
-      "description": "Domowe wypieki na urodziny, święta i każdą słodką okazję.",
-      "image": "/images/ig/naked-cake.jpg",
-      "dishes": [
-        {
-          "name": "Naked cake z owocami",
-          "ingredients": "biszkopt, krem, borówki, porzeczki, śliwki, morele"
-        },
-        {
-          "name": "Sernik",
-          "ingredients": "twaróg, jajka, wanilia, kruchy spód, suszona pomarańcza"
-        },
-        {
-          "name": "Piernik",
-          "ingredients": "mąka, miód, przyprawa korzenna, cukier puder"
-        }
-      ]
-    },
-    {
       "graphics": [
         {
           "image": "/images/uploads/2.jpg"
@@ -118,6 +18,28 @@
       "title": "OFERTA ŚWIĄTECZNA DLA FIRM",
       "occasion": "Święta",
       "image": "/images/uploads/oferta-bożonarodzeniowa-dla-firm.jpg"
+    },
+    {
+      "title": "OFERTA ŚWIĄTECZNA DLA KLIENTÓW INDYWIDUALNYCH",
+      "occasion": "Święta",
+      "image": "/images/uploads/oferta-boże-narodzenie-2026-prywatne.jpg",
+      "graphics": [
+        {
+          "image": "/images/uploads/1.jpg"
+        },
+        {
+          "image": "/images/uploads/2.jpg"
+        },
+        {
+          "image": "/images/uploads/3.jpg"
+        },
+        {
+          "image": "/images/uploads/4.jpg"
+        },
+        {
+          "image": "/images/uploads/5.jpg"
+        }
+      ]
     }
   ]
 }
