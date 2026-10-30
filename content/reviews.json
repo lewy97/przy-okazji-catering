@@ -1,10 +1,23 @@
 {
   "rating": 5,
-  "count": 0,
-  "googleUrl": "",
+  "count": 3,
+  "googleUrl": "https://share.google/yy7Ihd35zIhG8m3Pm",
   "reviewUrl": "",
   "reviews": [
-    { "author": "Przykładowa opinia", "rating": 5, "date": "", "text": "Tu wklej prawdziwą opinię z Google – edytujesz ją w panelu /admin w sekcji „Opinie Google”." },
-    { "author": "Przykładowa opinia", "rating": 5, "date": "", "text": "Każdą opinię dodajesz osobno: autor, liczba gwiazdek, data i treść." }
+    {
+      "rating": 5,
+      "author": "Anita Aurelia",
+      "text": "Z całego serca polecam! Zamówiłam katering na moją imprezę urodzinową w stylu garden party. Zależało mi na przekąskach które można złapać do ręki i zjeść, ponieważ nie było miejsca, żeby usadzić wszystkich gości przy stole. Pani Karolina świetnie mi wszystko doradziła i wyszło idealnie. Goście byli zachwyceni jedzeniem! Wszystko nie tylko wyglądało apetycznie ale wręcz rozpływało się w ustach. Zdecydowanie będę jeszcze korzystać z usług kateringu PRZY OKAZJI kolejnych imprez okolicznościowych 😉"
+    },
+    {
+      "rating": 5,
+      "author": "Magdalena",
+      "text": "Mieliśmy przyjemność współpracować z firmą „Przy Okazji” przy organizacji przyjęcia z okazji I Komunii Świętej i był to absolutny strzał w dziesiątkę!\nZarówno dania główne, jak i przystawki zachwyciły wszystkich gości — nie tylko pięknym, apetycznym sposobem podania, ale przede wszystkim genialnym, domowym, a zarazem eleganckim smakiem. Mięsa były niezwykle soczyste, surówki świeże, a przystawki znikały ze stołów w mgnieniu oka. Zapewniam, że po imprezie nie zostało praktycznie nic!\nOrganizacyjnie wszystko dopięte na ostatni guzik: jedzenie dowiezione idealnie na czas, ciepłe i przygotowane z ogromną dbałością o detale. Dzięki Pani Karolinie mogłam całkowicie skupić się na przeżywaniu tego wyjątkowego dnia z rodziną, nie martwiąc się o stronę kulinarną.\nZ czystym sercem polecam każdemu, kto szuka cateringu na najwyższym poziomie. Na pewno wrócimy przy kolejnej okazji! 😊"
+    },
+    {
+      "rating": 5,
+      "author": "Edyta",
+      "text": "Zamówiłam catering na spotkanie biznesowe i jestem bardzo zadowolona. Wszystko zostało dostarczone punktualnie prosto do firmy. Jedzenie było bardzo smaczne i estetycznie podane, a goście chętnie po nie sięgali – catering zniknął naprawdę szybko i zebrał same pozytywne opinie. Cała organizacja przebiegła bez problemu. Z przyjemnością zamówię ponownie."
+    }
   ]
 }
