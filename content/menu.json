@@ -40,6 +40,28 @@
           "image": "/images/uploads/5.jpg"
         }
       ]
+    },
+    {
+      "occasion": "Plan zdjęciowy / Firmy",
+      "title": "Oferta na szkolenia i spotkania firmowe",
+      "image": "/images/uploads/1.jpg",
+      "graphics": [
+        {
+          "image": "/images/uploads/2.jpg"
+        },
+        {
+          "image": "/images/uploads/3.jpg"
+        },
+        {
+          "image": "/images/uploads/4.jpg"
+        },
+        {
+          "image": "/images/uploads/5.jpg"
+        },
+        {
+          "image": "/images/uploads/6.jpg"
+        }
+      ]
     }
   ]
 }
